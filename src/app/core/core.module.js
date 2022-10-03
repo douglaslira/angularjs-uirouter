@@ -11,7 +11,6 @@
                 'ngMessages',
                 'ngResource',
                 'ngSanitize',
-                'ui.router',
-                'ngWebSocket'
+                'ui.router'
             ]);
 })();
