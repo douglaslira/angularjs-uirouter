@@ -36,9 +36,13 @@
                 }
             },
             resolve  : {
-                data: function($q) {
+                data: function($q,$rootScope) {
+                    $rootScope.loadingProgress = true;
                     var deferred = $q.defer();
-                    deferred.resolve({page: 'Other template'});
+                    setTimeout(function(){
+                        deferred.resolve({page: 'Other template'});
+                    }, 5000);
+                    $rootScope.loadingProgress = false;
                     return deferred.promise;
                 }
             }
